@@ -1,5 +1,7 @@
 ﻿using global::Microsoft.CodeAnalysis;
 
+#nullable enable
+
 namespace AutoSource
 {
     internal static class SourceDisplayFormats

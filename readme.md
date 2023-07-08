@@ -26,6 +26,8 @@ using global::Microsoft.CodeAnalysis;
 using global::Microsoft.CodeAnalysis.Text;
 using global::System.Text;
 
+#nullable enable
+
 namespace AutoSource
 {
     internal class CodeBuilder
@@ -44,15 +46,24 @@ namespace AutoSource
             return this;
         }
 
+        public void IncreaseIndent() { _indent++; }
+        public void DecreaseIndent()
+        {
+            if (_indent > 0)
+            {
+                _indent--;
+            }
+        }
+
         public CodeBuilder StartBlock()
         {
             AppendLine("{");
-            _indent++;
+            IncreaseIndent();
             return this;
         }
         public CodeBuilder EndBlock()
         {
-            _indent--;
+            DecreaseIndent();
             AppendLine("}");
             return this;
         }
@@ -128,6 +139,8 @@ namespace AutoSource
 ```cs
 using global::Microsoft.CodeAnalysis;
 
+#nullable enable
+
 namespace AutoSource
 {
     internal static class SourceDisplayFormats
@@ -152,6 +165,8 @@ namespace AutoSource
 ```cs
 using global::Microsoft.CodeAnalysis;
 using global::Microsoft.CodeAnalysis.CSharp.Syntax;
+
+#nullable enable
 
 namespace AutoSource
 {

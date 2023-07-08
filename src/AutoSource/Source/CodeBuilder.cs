@@ -2,6 +2,8 @@
 using global::Microsoft.CodeAnalysis.Text;
 using global::System.Text;
 
+#nullable enable
+
 namespace AutoSource
 {
     internal class CodeBuilder
@@ -20,15 +22,24 @@ namespace AutoSource
             return this;
         }
 
+        public void IncreaseIndent() { _indent++; }
+        public void DecreaseIndent()
+        {
+            if (_indent > 0)
+            {
+                _indent--;
+            }
+        }
+
         public CodeBuilder StartBlock()
         {
             AppendLine("{");
-            _indent++;
+            IncreaseIndent();
             return this;
         }
         public CodeBuilder EndBlock()
         {
-            _indent--;
+            DecreaseIndent();
             AppendLine("}");
             return this;
         }

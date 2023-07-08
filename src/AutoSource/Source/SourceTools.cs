@@ -1,6 +1,8 @@
 ﻿using global::Microsoft.CodeAnalysis;
 using global::Microsoft.CodeAnalysis.CSharp.Syntax;
 
+#nullable enable
+
 namespace AutoSource
 {
     internal static class SourceTools
