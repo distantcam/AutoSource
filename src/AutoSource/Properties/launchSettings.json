@@ -1,0 +1,8 @@
+{
+    "profiles": {
+        "AutoSource Debug": {
+            "commandName": "DebugRoslynComponent",
+            "targetProject": "..\\AutoSource.Debug\\AutoSource.Debug.csproj"
+        }
+    }
+}
