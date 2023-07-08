@@ -18,7 +18,7 @@ https://nuget.org/packages/AutoSource/
 ## Files included
 
 <details>
-<summary><a href="https://github.com/distantcam/AutoSource/src/AutoSource/Source/CodeBuilder.cs">CodeBuilder.cs</a></summary>
+<summary><a href="https://github.com/distantcam/AutoSource/blob/main/src/AutoSource/Source/CodeBuilder.cs">CodeBuilder.cs</a></summary>
 
 <!-- snippet: CodeBuilder.cs -->
 ```cs
@@ -119,7 +119,7 @@ internal class CodeBuilder
 </details>
 
 <details>
-<summary><a href="https://github.com/distantcam/AutoSource/src/AutoSource/Source/SourceDisplayFormats.cs">SourceDisplayFormats.cs</a></summary>
+<summary><a href="https://github.com/distantcam/AutoSource/blob/main/src/AutoSource/Source/SourceDisplayFormats.cs">SourceDisplayFormats.cs</a></summary>
 
 <!-- snippet: SourceDisplayFormats.cs -->
 ```cs
@@ -140,7 +140,7 @@ internal static class SourceDisplayFormats
 </details>
 
 <details>
-<summary><a href="https://github.com/distantcam/AutoSource/src/AutoSource/Source/SourceTools.cs">SourceTools.cs</a></summary>
+<summary><a href="https://github.com/distantcam/AutoSource/blob/main/src/AutoSource/Source/SourceTools.cs">SourceTools.cs</a></summary>
 
 <!-- snippet: SourceTools.cs -->
 ```cs
