@@ -21,6 +21,11 @@ namespace AutoSource
             _stringBuilder.AppendLine(Indent + line);
             return this;
         }
+        public CodeBuilder AppendLineNoIndent(string line)
+        {
+            _stringBuilder.AppendLine(line);
+            return this;
+        }
 
         public void IncreaseIndent() { _indent++; }
         public void DecreaseIndent()
