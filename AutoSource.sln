@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoSource", "AutoSource\AutoSource.csproj", "{60062DD8-69F7-478E-A378-FEEE710BFBB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoSource", "src\AutoSource\AutoSource.csproj", "{60062DD8-69F7-478E-A378-FEEE710BFBB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoSource.Debug", "AutoSource.Debug\AutoSource.Debug.csproj", "{BB50E607-9B3F-417D-A34D-DAA0765BEE6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoSource.Debug", "src\AutoSource.Debug\AutoSource.Debug.csproj", "{BB50E607-9B3F-417D-A34D-DAA0765BEE6E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{35F84DFB-9236-4B03-8783-46C9086B8485}"
 	ProjectSection(SolutionItems) = preProject
 		Directory.Build.props = Directory.Build.props
-		..\readme.source.md = ..\readme.source.md
+		readme.source.md = readme.source.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoSource.Tests", "src\AutoSource.Tests\AutoSource.Tests.csproj", "{46817054-DDDA-4793-A6A0-8E88622719D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{BB50E607-9B3F-417D-A34D-DAA0765BEE6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB50E607-9B3F-417D-A34D-DAA0765BEE6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB50E607-9B3F-417D-A34D-DAA0765BEE6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46817054-DDDA-4793-A6A0-8E88622719D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46817054-DDDA-4793-A6A0-8E88622719D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46817054-DDDA-4793-A6A0-8E88622719D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46817054-DDDA-4793-A6A0-8E88622719D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

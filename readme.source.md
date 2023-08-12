@@ -6,27 +6,3 @@
 ## NuGet packages
 
 https://nuget.org/packages/AutoSource/
-
-
-## Files included
-
-<details>
-<summary><a href="https://github.com/distantcam/AutoSource/blob/main/src/AutoSource/Source/CodeBuilder.cs">CodeBuilder.cs</a></summary>
-
-snippet: CodeBuilder.cs
-
-</details>
-
-<details>
-<summary><a href="https://github.com/distantcam/AutoSource/blob/main/src/AutoSource/Source/SourceDisplayFormats.cs">SourceDisplayFormats.cs</a></summary>
-
-snippet: SourceDisplayFormats.cs
-
-</details>
-
-<details>
-<summary><a href="https://github.com/distantcam/AutoSource/blob/main/src/AutoSource/Source/SourceTools.cs">SourceTools.cs</a></summary>
-
-snippet: SourceTools.cs
-
-</details>

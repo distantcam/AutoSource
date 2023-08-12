@@ -1,5 +1,20 @@
-﻿using global::Microsoft.CodeAnalysis;
+﻿using System.Text;
+using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.Text;
+
+namespace AutoSource;
+
+[Generator(LanguageNames.CSharp)]
+public class SourceToolsGenerator : ISourceGenerator
+{
+    public void Initialize(GeneratorInitializationContext context) { }
+
+    public void Execute(GeneratorExecutionContext context)
+    {
+        context.AddSource("SourceTools.g.cs", SourceText.From(@"
+using global::Microsoft.CodeAnalysis;
 using global::Microsoft.CodeAnalysis.CSharp.Syntax;
+using global::System.Threading;
 
 #nullable enable
 
@@ -16,7 +31,7 @@ namespace AutoSource
                 QualifiedNameSyntax qns => qns.Right.Identifier.Text,
                 _ => null
             };
-            return name == attributeName || name == attributeName + "Attribute";
+            return name == attributeName || name == attributeName + ""Attribute"";
         }
 
         public static IMethodSymbol? GetMethodFromAttribute(GeneratorSyntaxContext context, CancellationToken cancellationToken)
@@ -31,8 +46,8 @@ namespace AutoSource
         {
             var attributeSyntax = (AttributeSyntax)context.Node;
 
-            // "attribute.Parent" is "AttributeListSyntax"
-            // "attribute.Parent.Parent" is a C# fragment the attributes are applied to
+            // ""attribute.Parent"" is ""AttributeListSyntax""
+            // ""attribute.Parent.Parent"" is a C# fragment the attributes are applied to
             TypeDeclarationSyntax? typeNode = attributeSyntax.Parent?.Parent switch
             {
                 ClassDeclarationSyntax classDeclarationSyntax => classDeclarationSyntax,
@@ -45,5 +60,8 @@ namespace AutoSource
             if (context.SemanticModel.GetDeclaredSymbol(typeNode) is not ITypeSymbol type) return null;
             return type;
         }
+    }
+}
+", Encoding.UTF8));
     }
 }

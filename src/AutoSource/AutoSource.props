@@ -1,0 +1,10 @@
+<Project>
+
+  <ItemGroup>
+    <CompilerVisibleProperty Include="AssemblyName" />
+    <CompilerVisibleProperty Include="PackageProjectUrl" />
+    <CompilerVisibleProperty Include="Version" />
+    <CompilerVisibleProperty Include="GitSha" />
+  </ItemGroup>
+
+</Project>
