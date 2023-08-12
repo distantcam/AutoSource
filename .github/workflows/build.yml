@@ -84,9 +84,9 @@ jobs:
         run: dotnet build --configuration Release -p:Version=${{ github.ref_name }} -p:GitSha=${{ github.sha }} --no-restore
 
       - name: 📦 Upload Artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
-          name: nupkg
+          name: nuget
           path: nugets/*.nupkg
 
       - name: ✈️ Push Nuget
