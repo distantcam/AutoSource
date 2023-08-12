@@ -27,7 +27,7 @@ jobs:
       - name: 👨‍🔧 Setup .NET Core SDK
         uses: actions/setup-dotnet@v3
         with:
-          global-json-file: global.json
+          global-json-file: src/global.json
 
       - name: 🔍 Enable problem matchers
         run: echo "::add-matcher::.github/matchers/dotnet.json"
@@ -64,7 +64,7 @@ jobs:
       - name: 👨‍🔧 Setup .NET Core SDK
         uses: actions/setup-dotnet@v3
         with:
-          global-json-file: global.json
+          global-json-file: src/global.json
 
       - name: 🔍 Enable problem matchers
         run: echo "::add-matcher::.github/matchers/dotnet.json"
