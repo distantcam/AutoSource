@@ -4,7 +4,6 @@ using Microsoft.CodeAnalysis.CSharp;
 
 namespace AutoSource.Tests;
 
-[UsesVerify]
 public class CompilationTests
 {
     [Fact]

@@ -4,9 +4,9 @@
     ".NETStandard,Version=v2.0": {
       "MarkdownSnippets.MsBuild": {
         "type": "Direct",
-        "requested": "[25.0.1, )",
-        "resolved": "25.0.1",
-        "contentHash": "fnqRk5bKGD0eMwq0saZflnz7eAQdP48ipMB1KzK79iOqVm1qpZlNEG6V8vEAFb/YWNYEN4hpgx7K4d2L7HvlHg=="
+        "requested": "[25.1.0, )",
+        "resolved": "25.1.0",
+        "contentHash": "VgAmlPpPTZPzXOpu1gRJr/P6iBgul/AbGqG5eQ6G80j8nxp3YuwRrv1J16k/cLG5K5VTyRRs6W8EtZ68HEP/PQ=="
       },
       "Microsoft.CodeAnalysis.Analyzers": {
         "type": "Direct",

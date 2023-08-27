@@ -1,33 +1,22 @@
-﻿using System.Text;
+﻿using System.IO;
+using System.Reflection;
+using System.Text;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Text;
 
 namespace AutoSource;
 
 [Generator(LanguageNames.CSharp)]
-public class SourceDisplayFormatsGenerator : ISourceGenerator
+public class SourceDisplayFormatsGenerator : IIncrementalGenerator
 {
-    public void Initialize(GeneratorInitializationContext context) { }
-
-    public void Execute(GeneratorExecutionContext context)
+    public void Initialize(IncrementalGeneratorInitializationContext context)
     {
-        context.AddSource("SourceDisplayFormats.g.cs", SourceText.From(@"
-using global::Microsoft.CodeAnalysis;
-
-#nullable enable
-
-namespace AutoSource
-{
-    internal static class SourceDisplayFormats
-    {
-        public static readonly SymbolDisplayFormat FullyQualifiedParameterFormat = SymbolDisplayFormat.FullyQualifiedFormat
-            .WithParameterOptions(
-                SymbolDisplayParameterOptions.IncludeName |
-                SymbolDisplayParameterOptions.IncludeType |
-                SymbolDisplayParameterOptions.IncludeParamsRefOut
-            );
-    }
-}
-", Encoding.UTF8));
+        context.RegisterPostInitializationOutput(static ctx =>
+        {
+            using var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("SourceDisplayFormats.cs");
+            using var reader = new StreamReader(stream);
+            var source = reader.ReadToEnd();
+            ctx.AddSource("SourceDisplayFormats.g.cs", SourceText.From(source, Encoding.UTF8));
+        });
     }
 }
