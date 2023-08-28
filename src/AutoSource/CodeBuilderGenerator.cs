@@ -6,7 +6,7 @@ using Microsoft.CodeAnalysis.Text;
 
 namespace AutoSource;
 
-[Generator(LanguageNames.CSharp)]
+[Generator]
 public class CodeBuilderGenerator : IIncrementalGenerator
 {
     private record SourceProperty(string? PackageProjectUrl, string? AssemblyName, string? Version, string? GitSha);

@@ -6,7 +6,7 @@ using Microsoft.CodeAnalysis.Text;
 
 namespace AutoSource;
 
-[Generator(LanguageNames.CSharp)]
+[Generator]
 public class SourceDisplayFormatsGenerator : IIncrementalGenerator
 {
     public void Initialize(IncrementalGeneratorInitializationContext context)
